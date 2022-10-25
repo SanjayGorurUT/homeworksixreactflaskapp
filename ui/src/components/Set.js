@@ -56,7 +56,7 @@ export class Set extends Component {
     
     updateCheckOut() {
         var removed = parseInt(document.getElementById(this.state.diffTwo).value);
-        if(isNaN(removed))
+        if(isNaN(removed) || removed > this.state.amount)
         {
             return;
         }

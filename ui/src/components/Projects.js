@@ -15,9 +15,9 @@ export class Projects extends Component {
         return (
             <div class='Projects'>
                 <h2> Projects </h2>
-                <Project count={this.state.count++}/>
-                <Project count={this.state.count++}/>
-                <Project count={this.state.count++}/>
+                <Project name = {String("Project" + this.state.count)} count={this.state.count++}/>
+                <Project name = {String("Project" + this.state.count)} count={this.state.count++}/>
+                <Project name = {String("Project" + this.state.count)} count={this.state.count++}/>
             </div>
         )
     }
