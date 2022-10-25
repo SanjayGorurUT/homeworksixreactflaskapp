@@ -46,7 +46,7 @@ export class Set extends Component {
         }
         document.getElementById(this.state.diffOne).innerHTML = "HWSet" + this.state.set + ": " + this.state.amount + "/100";
 
-        fetch(`/checkin${this.state.name}/${added}`)
+        fetch(`/checkin/${this.state.name}/${added}`)
                 .then(response => response.text())
                 .then((response) => {
                     alert(response)

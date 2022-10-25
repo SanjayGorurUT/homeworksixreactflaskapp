@@ -23,13 +23,13 @@ export class Project extends Component {
                      three = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set)}
                      four = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set+ ":" + this.state.count + ":" + this.state.set)}
                      set={this.state.set++}
-                     name = {String(" Project Name " + this.state.count)}/>
+                     name = {String("ProjectName" + this.state.count)}/>
                 <Set one = {String(this.state.count + ":" + this.state.set)} 
                      two = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set)}
                      three = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set)}
                      four = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set+ ":" + this.state.count + ":" + this.state.set)}
                      set={this.state.set++}
-                     name = {String(" Project Name " + this.state.count)}/>
+                     name = {String("ProjectName" + this.state.count)}/>
                 <Button id='join'>Join</Button>
             </div>
         )
