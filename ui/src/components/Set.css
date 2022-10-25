@@ -1,0 +1,14 @@
+.Set {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#add, #remove {
+    background-color: bisque;
+    height: 40px;
+}
+
+#amount {
+    height: 10px;
+}

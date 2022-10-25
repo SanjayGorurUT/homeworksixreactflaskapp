@@ -1,0 +1,19 @@
+.Project {
+    background-color: lightgrey;
+    margin: 20px;
+    width: 1000px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 50px;
+    justify-content: space-evenly;
+}
+
+#join {
+    width: 80px;
+    height: 80px;
+    float: right;
+    background-color: wheat;
+}
