@@ -3,6 +3,10 @@ from flask import Flask, send_from_directory
 
 app = Flask(__name__, static_url_path='', static_folder='ui/build/')
 
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
 @app.route('/checkin/<projectname>/<qty>')
 def checkIn_hardware(projectname, qty):
     return str(qty) + " was checked in to " + str(projectname)
