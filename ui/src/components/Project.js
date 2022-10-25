@@ -1,72 +1,39 @@
-import React from 'react'
-import Button from '@mui/material/Button';
+import React, { Component} from 'react';
+import "./Project.css";
+import { Button } from '@mui/material';
 import Set from './Set';
 
-class Project extends React.Component{
+export class Project extends Component {
 
-    constructor(props) {
+    constructor(props)
+    {
         super(props);
         this.state = {
-            name: props.name,
-            users: props.users,
-            username: props.userName,
-            userProject: false,
-            HWSetAvailability: props.HWSetAvailability,
-            HWSetCapacity: props.HWSetCapacity,
-            handler: props.handler
-        };
-    
+            count: props.count,
+            set: 1
+        }
     }
 
-    arrayRemove(arr, value) { 
-    
-        return arr.filter(function(e){ 
-            return e != value; 
-        });
-    }
-
-    addToUsers(){
-        var usersArray = this.state.users;
-        if(this.state.userProject){
-            usersArray = this.arrayRemove(usersArray,this.state.username)
-            fetch(`/leave/${this.state.name}`)
-                .then(response => response.text())
-                .then((response) => {
-                    alert(response)
-                })
-                .catch(err => console.log(err))
-        }
-        else{
-            fetch(`/join/${this.state.name}`)
-                .then(response => response.text())
-                .then((response) => {
-                    alert(response)
-                })
-                .catch(err => console.log(err))
-            usersArray.push(this.state.username);
-        }
-        this.setState({users:usersArray});
-        this.setState({userProject: !this.state.userProject})
-    }
-    render(){
-        // console.log(this.state.HWSetAvailability)
-        return(
-            <div className="project">
-                <div className="projectContainer">
-                    <h3>{this.state.name}</h3>
-        
-                    <h5>Users: <span>{this.state.users.join(", ")}</span></h5>
-                    <Button className="userButton" variant="contained" onClick={() => this.addToUsers()}>{this.state.userProject ? "LEAVE" : "JOIN"}</Button>
-                    <div className="HWSetListing">
-                        <Set name="HWSet1" available={this.state.HWSetAvailability[0]} capacity={this.state.HWSetCapacity[0]} handler={this.state.handler}></Set>
-                        <Set name="HWSet2" available={this.state.HWSetAvailability[1]} capacity={this.state.HWSetCapacity[1]} handler={this.state.handler}></Set>
-                    </div>
-                </div>
+    render () {
+        return (
+            <div class='Project'>
+                <p> Project Name {this.state.count} </p>
+                <Set one = {String(this.state.count + ":" + this.state.set)} 
+                     two = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set)}
+                     three = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set)}
+                     four = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set+ ":" + this.state.count + ":" + this.state.set)}
+                     set={this.state.set++}
+                     name = {String(" Project Name " + this.state.count)}/>
+                <Set one = {String(this.state.count + ":" + this.state.set)} 
+                     two = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set)}
+                     three = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set)}
+                     four = {String(this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set + ":" + this.state.count + ":" + this.state.set+ ":" + this.state.count + ":" + this.state.set)}
+                     set={this.state.set++}
+                     name = {String(" Project Name " + this.state.count)}/>
+                <Button id='join'>Join</Button>
             </div>
-        );
+        )
     }
-
-  
 }
 
 export default Project

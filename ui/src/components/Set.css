@@ -4,9 +4,14 @@
     justify-content: space-evenly;
 }
 
-#add, #remove {
-    background-color: bisque;
-    height: 40px;
+.buttonOne {
+    background-color: lightgreen;
+    margin: 5px;
+}
+
+.buttonTwo {
+    background-color: lightgreen;
+    margin: 5px;
 }
 
 #amount {
