@@ -13,7 +13,7 @@ def checkIn_hardware(projectname, qty):
 
 @app.route('/checkout/<projectname>/<qty>')
 def checkOut_hardware(projectname, qty):
-    return str(qty) + " was checked out to " + str(projectname)
+    return str(qty) + " was checked out from " + str(projectname)
 
 @app.route('/join/<projectname>')
 def joinProject(projectname):
