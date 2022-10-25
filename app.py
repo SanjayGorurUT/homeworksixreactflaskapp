@@ -13,7 +13,7 @@ def checkIn_hardware(projectname, qty):
 
 @app.route('/checkout/<projectname>/<qty>')
 def checkOut_hardware(projectname,qty):
-    return '{qty} hardware checked out to {projectname}'.format(qty=qty, projectid=projectname)
+    return '{qty} hardware checked out to {projectname}'.format(qty=qty, projectname=projectname)
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
